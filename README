@@ -1,0 +1,7 @@
+Step-by-step Instructions
+
+Download the Terraform and Lamdba from code.amazon.com.
+Create s3 bucket for Lambda code. The Bucket name will be as Parameters when launch the Terraform
+Copy the createDesbucket.zip to above bucket.
+Launch the Terraform in the region to create source bucket.
+Enter the parameters as defined in this document
