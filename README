@@ -5,3 +5,12 @@ Create s3 bucket for Lambda code. The Bucket name will be as Parameters when lau
 Copy the createDesbucket.zip to above bucket.
 Launch the Terraform in the region to create source bucket.
 Enter the parameters as defined in this document
+
+
+
+•	Use custom KMS key and grant fine-grained access to AWS admin account and grant access to EC2 role (Need to run the backup) to encrypt and decrypt.  Creating in this solution two KMS key one in each region 
+•	Deny any upload are not encrypted using aws:kms 
+•	Enable bucket versioning 
+•	Enable bucket logging
+•	Replicate objects which has been  encrypted in source bucket and the objects are encrypted in the target backup. 
+Other feature is creating lifecycle policy to move the backup after 7 days to glacier and delete it from glacier after one year. 
